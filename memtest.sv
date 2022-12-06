@@ -469,26 +469,7 @@ always @(posedge clk_ram) begin
 end
 
 wire [31:0] passcount, failcount;
-tester my_memtst
-(
-	.clk(clk_ram),
-	.rst_n(~reset),
-	.sz(sdram_sz),
-	.chip(sdram_chip),
-	.passcount(passcount),
-	.failcount(failcount),
-	.DRAM_CLK(SDRAM_CLK),
-	.DRAM_DQ(SDRAM_DQ),
-	.DRAM_ADDR(SDRAM_A),
-	.DRAM_LDQM(SDRAM_DQML),
-	.DRAM_UDQM(SDRAM_DQMH),
-	.DRAM_WE_N(SDRAM_nWE),
-	.DRAM_CS_N(SDRAM_nCS),
-	.DRAM_RAS_N(SDRAM_nRAS),
-	.DRAM_CAS_N(SDRAM_nCAS),
-	.DRAM_BA_0(SDRAM_BA[0]),
-	.DRAM_BA_1(SDRAM_BA[1])
-);
+
 
 
 ///////////////////////////////////////////////////////////////////
